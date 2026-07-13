@@ -22,8 +22,10 @@ int main(void)
 {
 	int LVcount = 0;
 	int LV = 0;
-
 	srand((unsigned int)time(NULL));
+
+	//なぜかLVが上がりません。
 	Game(LVcount,LV);
+	
 	return 0;
 }

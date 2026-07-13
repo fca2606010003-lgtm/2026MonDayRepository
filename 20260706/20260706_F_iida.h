@@ -4,8 +4,6 @@
 #include<ctime>
 #include"20260706_H_iida.h"
 
-
-
 int PCheck(int player)//入力チェック
 {
 	while (true)
@@ -43,7 +41,7 @@ int LevelUpEXP(int& Lv ,int& LVcount)//経験値中身
 
 	return LVcount, Lv;
 }
-//
+
 //int LVup(int LVcount,int LV)//LV上げ中身
 //{
 //	if (LVcount >= LVUP)
@@ -54,7 +52,7 @@ int LevelUpEXP(int& Lv ,int& LVcount)//経験値中身
 //	return LVcount, LV;
 //}
 
-int Game(int &LV,int &LVcount)
+int Game(int& LV,int& LVcount)
 {
 	//変数
 	int Player = 0;

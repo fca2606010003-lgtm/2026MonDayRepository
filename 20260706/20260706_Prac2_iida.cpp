@@ -20,6 +20,10 @@ CPUとじゃんけんを行いましょう。
 
 int main(void)
 {
-	Game();
+	int LVcount = 0;
+	int LV = 0;
+
+	srand((unsigned int)time(NULL));
+	Game(LVcount,LV);
 	return 0;
 }

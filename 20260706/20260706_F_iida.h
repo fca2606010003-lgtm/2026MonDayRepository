@@ -4,13 +4,9 @@
 #include<ctime>
 #include"20260706_H_iida.h"
 
-int PCheck(int player);
-int ECheck(int enemy);
-int EXP(int Lv);
-int Lvup(int LVcount, int LV);
-int Game();
 
-int PCheck(int player)
+
+int PCheck(int player)//入力チェック
 {
 	while (true)
 	{
@@ -27,49 +23,62 @@ int PCheck(int player)
 	return player;
 }
 
-int ECheck(int enemy)
+int ECheck(int enemy)//enemy出力
 {
 	enemy = rand ()%3;
 	return enemy;
 }
-int EXP(int Lv)
+
+int LevelUpEXP(int& Lv ,int& LVcount)//経験値中身
 {
-	Lv = rand() % 15+1;
-	return Lv;
-}
-int Lvup(int LVcount,int LV)
-{
-	if (LVcount >= LVUP)
+	int LV= rand() % 15 + 1;
+	Lv = LV;
+	cout << "経験値獲得:" << Lv << endl;
+	if (Lv >= LVUP)
 	{
-		LV++;
+		LVcount++;
+
+		Lv = 0;
 	}
 
-	return LVcount, LV;
+	return LVcount, Lv;
 }
+//
+//int LVup(int LVcount,int LV)//LV上げ中身
+//{
+//	if (LVcount >= LVUP)
+//	{
+//		LV++;
+//	}
+//
+//	return LVcount, LV;
+//}
 
-int Game()
+int Game(int &LV,int &LVcount)
 {
+	//変数
 	int Player = 0;
 	int Enemy = 0;
 	int Judge = 0;
-	int LVcount = 0;
-	int LV = 0;
+
 
 	cout << "「ぐー：0」「ちょき：1」「ぱー：2」" << endl;
-
+	//ゲームの動作中身
 	while (true)
 	{
-		
-		Player=PCheck(Player);
-		srand((unsigned int)time(NULL));
-		Enemy = ECheck(Enemy);
+		cout << "LV:" << LV << endl;
 
+		Player=PCheck(Player);
+		Enemy = ECheck(Enemy);
+		//判定
 		Judge = Player - Enemy;
+
 		if (Judge== -1 ||Judge ==2)
 		{
 			cout << "WIN" << endl;
-			EXP(LVcount);
-			cout << LV << endl;
+			//LV上げ
+			LevelUpEXP(LVcount,LV);
+		    //LVup(LVcount,LV);
 		}
 		if (Player == Enemy)
 		{
@@ -79,7 +88,11 @@ int Game()
 		{
 			cout << "LOSE" << endl;
 		}
-		Lvup(LVcount, LVUP);
+
+		if (LV == 5)
+		{
+			break;
+		}
 	}
-	return Player, Enemy, LVcount, LV;
+	return Player, Enemy,Judge, LVcount, LV;
 }

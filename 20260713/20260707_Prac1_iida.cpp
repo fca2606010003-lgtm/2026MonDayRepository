@@ -27,7 +27,7 @@ int main(void)
 	cout << "Šï”:" << endl;
 	for (int i = 0; i < INDEX; i++)
 	{
-		if (arry[i%] % 2 != 0)
+		if (arry[i] % 2 != 0)
 		{
 			cout << arry[i] << "\n";
 		}

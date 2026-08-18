@@ -32,5 +32,8 @@
     <ClInclude Include="..\..\..\Downloads\20260817_Prac1_header.h">
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
+    <ClInclude Include="20260817_C_H_iida.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

@@ -129,6 +129,7 @@
   <ItemGroup>
     <ClCompile Include="..\..\..\Downloads\20260817_Prac1_function.cpp" />
     <ClCompile Include="..\..\..\Downloads\20260817_Prac1_main.cpp" />
+    <ClCompile Include="20260817_Fanc.cpp" />
     <ClCompile Include="20260817_normal_iida.cpp" />
   </ItemGroup>
   <ItemGroup>

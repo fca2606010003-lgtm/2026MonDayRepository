@@ -10,5 +10,5 @@ void Player::Action(Character&target)
 {
 	int choice;
 
-	cout <<"\nyƒvƒŒƒCƒ„[‚Ìƒ^[ƒ“z"<<"1FUŒ‚"
+	cout << "\nyƒvƒŒƒCƒ„[‚Ìƒ^[ƒ“z" << "1FUŒ‚" << endl;
 }

@@ -139,9 +139,15 @@
     </Manifest>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="Boss.h" />
     <ClInclude Include="Character.h" />
+    <ClInclude Include="Enemy.h" />
+    <ClInclude Include="Player.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Boss.cpp" />
+    <ClCompile Include="Enemy.cpp" />
+    <ClCompile Include="player.cpp" />
     <ClCompile Include="Main.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

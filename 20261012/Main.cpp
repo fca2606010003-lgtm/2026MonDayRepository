@@ -1,4 +1,7 @@
 #include"Character.h"
+#include"Player.h"
+#include"Enemy.h"
+#include"Boss.h"
 #include<iostream>
 #include<string>
 
@@ -37,10 +40,36 @@ void Character::Attack()
 
 int main(void)
 {
-	Character character("playerA");
+	Character character("A");
 	cout << character.GetName() << endl;
 
 	character.Attack();
+
+	string playerName;
+	string enemyName;
+	string bossName;
+	cout << "–¼‘O‚ð“ü—Í‚µ‚Ä‚­‚¾‚³‚¢" << endl;
+	cout << "—EŽÒ" << endl;
+	cin >> playerName;
+	cout << "“GF" << endl;
+	cin >> enemyName;
+	cout << "ƒ{ƒX" << endl;
+	cin >> bossName;
+
+	Player player("PLayer");
+	cout << player.GetName() << endl;
+
+	player.Attack();
+
+	Enemy enemy("Enemy");
+	cout << enemy.GetName() << endl;
+
+	enemy.Attack();
+
+	Boss boss("ƒ][ƒ}");
+	cout << boss.GetName() << endl;
+
+	boss.Attack();
 
 	return 0;
 }
